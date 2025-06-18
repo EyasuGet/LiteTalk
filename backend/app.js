@@ -6,6 +6,7 @@ import { v2 as cloudinary} from "cloudinary"
 
 import authRoutes from "./routes/auth.routes.js"
 import userRoutes from "./routes/user.routes.js"
+import postRoutes from "./routes/post.routes.js"
 
 import connectDB from "./config/db.js"
 
@@ -28,6 +29,7 @@ app.use(cookieParser())
 //routes
 app.use("/auth", authRoutes)
 app.use("/users", userRoutes)
+app.use("/posts", postRoutes)
 
 app.listen(8000, () => {
     console.log("server started on http://localhost:8000")
